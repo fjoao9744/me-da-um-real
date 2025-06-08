@@ -1,0 +1,68 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scale: 2;
+    overflow: hidden;
+}
+
+.meu-botão {
+    color: black;
+    border: 1px solid black;
+}
+.meu-botão:hover {
+    background-color: black;
+    border: 1px solid black;
+}
+
+h1 {
+    font-size: 30px;
+    color: black;
+}
+
+#moeda {
+    width: 280px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+    animation: girarMoeda 3s linear infinite;
+    transform-style: preserve-3d;
+    }
+
+    @keyframes girarMoeda {
+      from {
+        transform: rotateY(0deg);
+
+      }
+      to {
+        transform: rotateY(360deg);
+
+      }
+    }
+
+.text-shadow {
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+@media (min-width: 340px) and (max-width: 590px) {
+    h1 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 340px) {
+    h1 {
+        font-size: 18px;
+
+    }
+    
+}
+
+

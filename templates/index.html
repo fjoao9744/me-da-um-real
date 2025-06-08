@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me da um real</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'media/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <h1 class="fw-bold text-center text-uppercase lh-base text-shadow">me da um real</h1>
+    <img src="{% static 'media/um_real.png' %}" alt="um_real" id="moeda" class="img-fluid">
+
+    <button class="btn btn-outline-primary btn-sm fw-bold black meu-botão">Dar</button>
+
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
