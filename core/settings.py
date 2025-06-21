@@ -6,7 +6,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["1321-2804-1b3-9701-3217-fc-11ec-a36e-8df9.ngrok-free.app"]
 
 SECRET_KEY = config('SECRET_KEY')
 

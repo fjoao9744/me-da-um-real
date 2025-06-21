@@ -10,12 +10,39 @@
     <link rel="shortcut icon" href="{% static 'media/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
-    <h1 class="fw-bold text-center text-uppercase lh-base text-shadow">me da um real</h1>
-    <img src="{% static 'media/um_real.png' %}" alt="um_real" id="moeda" class="img-fluid">
+    <div style="transform: scale(2)" id="main">
+        <h1 class="fw-bold text-center text-uppercase lh-base text-shadow">me da um real</h1>
+        <img src="{% static 'media/um_real.png' %}" alt="um_real" id="moeda" class="img-fluid">
+        <button class="btn btn-outline-primary btn-sm fw-bold meu-botão" data-bs-toggle="modal" data-bs-target="#exampleModal">Dar</button>
+    </div>
 
-    <button class="btn btn-outline-primary btn-sm fw-bold black meu-botão">Dar</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-body">
+            <img src="{{ image }}" alt="Qr code" id="qrcode" class="d-block mx-auto">
+            <p>{{ pix }}</p>
+            <button class="btn btn-outline-success btn-sm fw-bold" onclick="copiarPix()">Copiar</button>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn n btn-outline-primary btn-sm fw-bold meu-botão" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
 
+    <script>
+        function copiarPix() {
+    
+    navigator.clipboard.writeText("{{ pix }}").then(function() {
+        alert("Código Pix copiado com sucesso!");
+    }, function(err) {
+        alert("Erro ao copiar: " + err);
+    });
+}
+    </script>
 
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

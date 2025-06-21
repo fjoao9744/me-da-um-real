@@ -11,8 +11,28 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    scale: 2;
     overflow: hidden;
+}
+
+#qrcode {
+    width: 300px;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.modal-body p {
+  word-wrap: break-word;       /* quebra palavras longas */
+  overflow-wrap: break-word;   /* padrão moderno para quebra */
+  white-space: normal;          /* permite quebra de linha */
+
 }
 
 .meu-botão {
@@ -52,12 +72,20 @@ h1 {
 }
 
 @media (min-width: 340px) and (max-width: 590px) {
+    #qrcode {
+        width: 250px;
+    }
+
     h1 {
         font-size: 22px;
     }
 }
 
 @media (max-width: 340px) {
+    #qrcode {
+        width: 130px;
+    }
+
     h1 {
         font-size: 18px;
 
